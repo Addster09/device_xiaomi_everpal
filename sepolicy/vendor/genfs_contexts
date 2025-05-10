@@ -1,6 +1,3 @@
-# Audio
-genfscon sysfs /devices/platform/11f00000.i2c6/i2c-6/6-0058                              u:object_r:sys_audio_awinic:s0
-
 # Fingerprint
 genfscon sysfs /devices/platform/11019000.spi5/spi_master/spi5/spi5.0                                       u:object_r:vendor_fingerprint_data_file:s0
 genfscon sysfs /devices/platform/11019000.spi5/spi_master/spi5/spi5.0/clk_enable                            u:object_r:vendor_fingerprint_data_file:s0

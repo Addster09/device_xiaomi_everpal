@@ -8,6 +8,3 @@ type vendor_fingerprint_device, fs_type, sysfs_type;
 
 # Sensor
 type sysfs_palm_sensor, fs_type, sysfs_type;
-
-# Audio
-type sys_audio_awinic, fs_type, sysfs_type;
