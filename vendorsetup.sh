@@ -11,4 +11,4 @@ rm -rf hardware/xiaomi && git clone https://github.com/LineageOS/android_hardwar
 #miui cam
 git clone https://gitlab.com/mmtrt/vendor_xiaomi_camera-everpal.git -b thirteen vendor/xiaomi/camera
 #viperfx
-git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
+git clone https://github.com/Addster09/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
