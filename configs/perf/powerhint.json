@@ -334,6 +334,30 @@
       "Value": "1"
     },
     {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "DRAMOppMin",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "UclampMin",
+      "Duration": 0,
+      "Value": "75"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "FGUclampMin",
+      "Duration": 0,
+      "Value": "75"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "TAUclampMin",
+      "Duration": 0,
+      "Value": "75"
+    },
+    {
       "PowerHint": "INTERACTION",
       "Node": "TASchedtuneBoost",
       "Duration": 0,
