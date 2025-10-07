@@ -18,3 +18,6 @@ ro.fm.short_ana_sup=1
 
 # Variant properties
 import /product/etc/props/${ro.boot.board_id}.prop
+
+# eBPF
+ro.bpf.kver_override=5.4.186
