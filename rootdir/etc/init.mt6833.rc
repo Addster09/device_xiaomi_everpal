@@ -39,21 +39,6 @@ on init
 #ExtB HONGMI-84715,jiiyanan.wt,Add,20210611,network configuration optimization
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
 
-    # Boot time cpuset and stune
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/foreground/boost/cpus 0-7
-    write /dev/cpuset/background/cpus 0-5
-    write /dev/cpuset/system-background/cpus 0-5
-    write /dev/cpuset/restricted/cpus 2-5
-    write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/foreground/schedtune.prefer_high_cap 1
-    write /dev/stune/foreground/schedtune.boost 100
-    write /dev/stune/schedtune.prefer_idle 1
-    write /dev/stune/schedtune.prefer_high_cap 1
-    write /dev/stune/schedtune.boost 100
-    write /dev/stune/top-app/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.prefer_high_cap 1
-    write /dev/stune/top-app/schedtune.boost 100
 
 on late-init
     write /proc/bootprof "INIT:late-init"
@@ -158,11 +143,12 @@ on late-fs
 on post-fs
     write /proc/bootprof "INIT:post-fs"
 
-    # boot perf. tune
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 100"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 100"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 100"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 100"
+on init
+    write /dev/cpuset/foreground/cpus 0-2,4-7
+    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/background/cpus 0-2
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/top-app/cpus 0-7
 
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
@@ -725,10 +711,6 @@ on post-fs-data
     chmod 0664 /sys/bus/platform/drivers/emi_ctrl/concurrency_scenario
     chown media media /sys/bus/platform/drivers/emi_ctrl/concurrency_scenario
 
-    #mtk_sched
-    chmod 0660 /dev/mtk_sched
-    chown system media /dev/mtk_sched
-
     #BT SCO CVSD, for MT6572 and MT6582 CVSD codec on AP
     chmod 0660 /dev/ebc
     chown media media /dev/ebc
@@ -1020,15 +1002,8 @@ service bugreport /system/bin/dumpstate -d -p -B -z \
     oneshot
     keycodes 114 115 116
 
-# end boot time fs tune
-on property:sys.boot_completed=1
 
-# update cpus for cpuset cgroup
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/foreground/boost/cpus 0-7
-    write /dev/cpuset/background/cpus 0-3
-    write /dev/cpuset/system-background/cpus 0-5
-    write /dev/cpuset/top-app/cpus 0-7
+on enable-low-power
 
     # Setup runtime schedTune
     write /dev/stune/foreground/schedtune.prefer_idle 1
@@ -1046,10 +1021,6 @@ on property:sys.boot_completed=1
     write /proc/cpufreq/cpufreq_sched_disable 0
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
-    # switch to sched-dvfs
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedplus"
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "schedplus"
-    
     # Initialize power HAL when boot is completed
     setprop vendor.powerhal.init 1
 
@@ -1060,6 +1031,9 @@ on property:sys.boot_completed=1
 #
 #  External Modme control related services
 #
+
+on property:sys.boot_completed=1
+    trigger enable-low-power
 
 # Battery info
 on property:persist.vendor.mediatek.fg.disable=1
