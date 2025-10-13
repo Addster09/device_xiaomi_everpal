@@ -22,6 +22,10 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_USES_AOSP_RECOVERY := true
+WITH_GMS := true
+TARGET_ENABLE_BLUR := true
+RISING_CHIPSET := "MTK810"
+RISING_MAINTAINER := "Addster"
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_everpal
