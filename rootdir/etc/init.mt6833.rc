@@ -16,6 +16,7 @@ on early-init
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 0 0"
     write /sys/devices/platform/boot_dramboost/dramboost/dramboost 1
 
+
 on init
     write /proc/bootprof "INIT:init"
     # Support legacy paths
@@ -23,6 +24,12 @@ on init
 
     # if primary storage is physical, set ro.vold.primary_physical to 1
     # setprop ro.vold.primary_physical 1
+
+    # Configure governor settings for little cluster
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
+
+    # Configure governor settings for big cluster
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
 
     mkdir /mnt/cd-rom 0000 system system
 
