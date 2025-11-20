@@ -17,6 +17,7 @@ genfscon sysfs /devices/platform/maxim_ds28e16/power_supply/batt_verify/type    
 genfscon sysfs /devices/platform/mt_charger/power_supply/ac                                                               u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/mt_charger/power_supply/charger                                                          u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/mt_charger/power_supply/usb                                                              u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/pd_adapter/Charging_Adapter/pd_adapter                                                   u:object_r:sysfs_batteryinfo:s0
 
 # Touchpanel
 genfscon sysfs /touchpanel/                                                                                               u:object_r:sysfs_touchpanel:s0
