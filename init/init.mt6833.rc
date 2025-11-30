@@ -104,7 +104,6 @@ on fs
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 60
     write /sys/kernel/mm/swap/vma_ra_enabled false
-    swapon_all /vendor/etc/fstab.mt6833
 
 	# mount rescue
 	mount ext4 /dev/block/by-name/rescue /mnt/rescue noatime
@@ -937,3 +936,5 @@ on init
 
 on property:sys.boot_completed=1
     restart android-hardware-media-c2-hal-1-2
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.mt6833
