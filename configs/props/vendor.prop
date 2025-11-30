@@ -285,6 +285,8 @@ zygote.critical_window.minute=10
 # Dalvik 
 dalvik.vm.boot-dex2oat-threads=4
 dalvik.vm.boot-dex2oat-cpu-set=4,5,6,7
+dalvik.vm.restore-dex2oat-threads=6
+dalvik.vm.restore-dex2oat-cpu-set=0,1,2,3,4,5
 
 # Zygisk Preforking 
 persist.device_config.runtime_native.usap_pool_enabled=true
