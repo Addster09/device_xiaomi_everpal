@@ -18,6 +18,13 @@ $(call inherit-product, vendor/mediatek/ims/ims.mk)
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/everpal/everpal-vendor.mk)
 
+# Dolby
+$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
+
+# LunarisDolby
+PRODUCT_PACKAGES += \
+    LunarisDolby
+
 # A/B
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.default_recovery \
