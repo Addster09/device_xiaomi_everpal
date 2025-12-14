@@ -186,6 +186,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResOverlayEverpal \
+    Launcher3DeviceOverlay \
     SettingsOverlayEverpal \
     SystemUIOverlayEverpal \
     TetheringOverlayEverpal \
