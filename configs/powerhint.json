@@ -242,6 +242,24 @@
       "Value": "1430000"
     },
     {
+      "PowerHint": "INTERACTION",
+      "Node": "UclampMin",
+      "Duration": 0,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "FGUclampMin",
+      "Duration": 0,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "TAUclampMin",
+      "Duration": 0,
+      "Value": "50"
+    },
+    {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 3000,
@@ -275,13 +293,13 @@
       "PowerHint": "LAUNCH",
       "Node": "TAUclampMin",
       "Duration": 3000,
-      "Value": "50"
+      "Value": "100"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "FGUclampMin",
       "Duration": 3000,
-      "Value": "50"
+      "Value": "100"
     },
     {
       "PowerHint": "LAUNCH",
