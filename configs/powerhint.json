@@ -464,6 +464,29 @@
       "Value": "50"
     },
     {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "UclampMin",
+      "Duration": 0,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "FGUclampMin",
+      "Duration": 0,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "TAUclampMin",
+      "Duration": 0,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Type": "EndHint",
+      "Value": "INTERACTION"
+    },
+    {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
       "Node": "DoubleTap",
       "Duration": 0,
