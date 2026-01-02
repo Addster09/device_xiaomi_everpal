@@ -36,7 +36,6 @@ product						/product			ext4		noatime,ro														wait,avb,logical,first_sta
 /dev/block/by-name/frp				/persistent			emmc		defaults														defaults
 /dev/block/by-name/nvram			/nvram				emmc		defaults														defaults
 /dev/block/by-name/proinfo			/proinfo			emmc		defaults														defaults
-/dev/block/by-name/expdb			/expdb				emmc		defaults														defaults
 /dev/block/by-name/seccfg			/seccfg				emmc		defaults														defaults
 
 # Misc
