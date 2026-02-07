@@ -5,10 +5,3 @@
 
 soong_namespace {
 }
-
-install_symlink {
-    name: "audio_param_global_symlink",
-    symlink_target: "/vendor/etc/audio_param",
-    installed_location: "etc/audio_param_global",
-    vendor: true,
-}
