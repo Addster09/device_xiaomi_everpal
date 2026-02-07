@@ -62,9 +62,6 @@ PRODUCT_PACKAGES += \
     audio_policy.stub:32
 
 PRODUCT_PACKAGES += \
-    audio_param_global_symlink
-
-PRODUCT_PACKAGES += \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \
