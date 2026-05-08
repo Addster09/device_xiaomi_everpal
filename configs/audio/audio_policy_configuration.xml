@@ -266,7 +266,7 @@
                 <route type="mix" sink="USB Device Out"
                        sources="primary output,deep_buffer,fast,voip_rx,FM Tuner In,Voice Call In,hifi_playback,immersive_out"/>
                 <route type="mix" sink="USB Headset Out"
-                       sources="primary output,deep_buffer,fast,voip_rx,FM Tuner In,Voice Call In,hifi_playback"/>
+                       sources="primary output,deep_buffer,fast,voip_rx,FM Tuner In,Voice Call In,hifi_playback,immersive_out"/>
                 <route type="mix" sink="AUX Digital Out"
                        sources="primary output"/>
                 <route type="mix" sink="BT SCO"

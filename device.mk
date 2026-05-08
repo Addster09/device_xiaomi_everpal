@@ -19,7 +19,13 @@ $(call inherit-product, vendor/mediatek/ims/ims.mk)
 $(call inherit-product, vendor/xiaomi/everpal/everpal-vendor.mk)
 
 # Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
+$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
+
+# LunarisDolby
+ifneq ($(wildcard hardware/dolby/dolby.mk),)
+PRODUCT_PACKAGES += \
+    LunarisDolby
+endif
 
 # A/B
 PRODUCT_PACKAGES += \
