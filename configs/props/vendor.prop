@@ -237,6 +237,7 @@ ro.vendor.vnd.current_rsc_path=/vendor/etc/rsc/GL
 telephony.active_modems.max_count=2
 
 # Surface Flinger
+debug.sf.enable_gl_backpressure=0
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_adpf_cpu_hint=true
