@@ -155,12 +155,16 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 ro.hardware.kmsetkey=beanpod
 
 # LMK
+ro.config.low_ram=false
+ro.lmk.use_psi=true
+ro.lmk.use_minfree_levels=false
+ro.lmk.use_new_strategy=true
+ro.lmk.thrashing_limit=100
+ro.lmk.thrashing_limit_decay=10
 ro.lmk.downgrade_pressure=60
-ro.lmk.filecache_min_kb=153600
+ro.lmk.swap_util_max=70
+ro.lmk.swap_free_low_percentage=10
 ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=50
-ro.lmk.medium=800
-ro.lmk.stall_limit_critical=40
 
 # Media
 debug.mediatek.disp_decompress=1
