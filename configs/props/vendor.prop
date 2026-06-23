@@ -275,6 +275,9 @@ ro.vendor.mtk_tee_gp_support=1
 # Verity
 ro.apk_verity.mode=2
 
+# USB
+vendor.usb.controller=musb-hdrc
+
 # WiFi
 ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wifi.sap.interface=ap0

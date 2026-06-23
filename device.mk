@@ -183,7 +183,6 @@ PRODUCT_PACKAGES += \
     init.mt6833.power.rc \
     init.mt6833.rc \
     init.mt6833.thermal.rc \
-    init.mt6833.usb.rc \
     init.project.rc \
     init.recovery.mt6833.rc \
     init.sensor_2_0.rc \
@@ -337,7 +336,8 @@ PRODUCT_ENABLE_UFFD_GC := true
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek
+    android.hardware.usb.gadget-service.mediatek \
+    init.mt6833.usb.rc
 
 # Vibrator
 $(call soong_config_set, vibrator, vibratortargets, vibratoraidlV2target)
