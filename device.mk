@@ -194,6 +194,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.km41.xml
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
