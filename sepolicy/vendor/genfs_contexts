@@ -10,11 +10,6 @@ genfscon sysfs /devices/platform/11019000.spi5/spi_master/spi5/spi5.0/fingerdown
 genfscon sysfs /devices/platform/11019000.spi5/spi_master/spi5/spi5.0/irq                                                 u:object_r:sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/11019000.spi5/spi_master/spi5/spi5.0/wakeup_enable                                       u:object_r:sysfs_fingerprint:s0
 
-# Graphics
-genfscon sysfs /devices/platform/13000000.mali/dvfs_period                                                                u:object_r:sysfs_gpu:s0
-genfscon sysfs /devices/platform/13000000.mali/js_ctx_scheduling_mode                                                     u:object_r:sysfs_gpu:s0
-genfscon sysfs /devices/platform/13000000.mali/js_scheduling_period                                                       u:object_r:sysfs_gpu:s0
-
 # Health
 genfscon sysfs /devices/platform/11e00000.i2c0/i2c-0/0-0066/power_supply                                                  u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/battery/power_supply/battery                                                             u:object_r:sysfs_batteryinfo:s0
