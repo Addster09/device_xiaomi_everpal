@@ -25,6 +25,7 @@ genfscon sysfs /devices/platform/mt_charger/power_supply/charger                
 genfscon sysfs /devices/platform/mt_charger/power_supply/usb                                                              u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/pd_adapter/Charging_Adapter/pd_adapter                                                   u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/rt-pd-manager/typec/port0                                                                u:object_r:sysfs_usb_nonplat:s0
+genfscon sysfs /devices/platform/battery/power_supply/battery/input_suspend                                               u:object_r:sysfs_battery_writable:s0
 
 # Touchpanel
 genfscon sysfs /touchpanel/                                                                                               u:object_r:sysfs_touchpanel:s0
