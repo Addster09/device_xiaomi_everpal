@@ -29,6 +29,9 @@ on init
     # ExtB HONGMI-84715,jiiyanan.wt,Add,20210611,network configuration optimization
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
 
+    # Charger
+    chown system system /sys/class/power_supply/battery/input_suspend
+
 on late-init
     write /proc/bootprof "INIT:late-init"
 
