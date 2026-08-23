@@ -109,6 +109,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
     'vendor/lib64/libmnl.so' : blob_fixup()
         .add_needed('libcutils.so'),
+    ('vendor/lib64/libcodec2_mtk_vdec.so', 'vendor/lib64/libcodec2_mtk_venc.so'): blob_fixup()
+        .replace_needed('libformatter.so', 'libformatter-v31.so'),
     ('vendor/lib64/libteei_daemon_vfs.so', 'vendor/lib64/libSQLiteModule_VER_ALL.so', 'vendor/lib64/lib3a.flash.so',
      'vendor/lib64/lib3a.ae.stat.so', 'vendor/lib64/lib3a.sensors.color.so', 'vendor/lib64/lib3a.sensors.flicker.so',
      'vendor/lib64/libaaa_ltm.so'): blob_fixup()
