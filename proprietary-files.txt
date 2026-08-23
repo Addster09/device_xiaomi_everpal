@@ -1030,7 +1030,7 @@ vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/libDR.so
-vendor/lib64/libmnl.so
+vendor/lib64/libmnl.so:vendor/lib64/libmnl-v30.so;FIX_SONAME
 
 # GNSS (Configs)
 vendor/etc/gnss/agps_profiles_conf2.xml
