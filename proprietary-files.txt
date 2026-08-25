@@ -1370,7 +1370,6 @@ vendor/firmware/aw8697_rtp_1.bin
 
 # WiFi
 vendor/bin/wlan_assistant
-vendor/etc/init/wlan_assistant.rc
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 
 # WiFi - from a13xins-user 14 UP1A.231005.007 M136BXXSBDYD3 release-keys
