@@ -195,6 +195,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.km41.xml
 
+# Disable VINTF requirements
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # ION
 $(call soong_config_set_bool,libion,legacy_impl,true)
 
