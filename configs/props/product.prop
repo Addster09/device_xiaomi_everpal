@@ -20,4 +20,4 @@ ro.fm.short_ana_sup=1
 import /product/etc/props/${ro.boot.board_id}.prop
 
 # eBPF
-ro.bpf.kver_override=5.4.186
+ro.bpf.kver_override=5.10.239
