@@ -56,19 +56,19 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@7.0-impl:32 \
-    android.hardware.audio.effect@7.0-impl:32 \
+    android.hardware.audio@7.0-impl \
+    android.hardware.audio.effect@7.0-impl \
 
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl:32 \
+    android.hardware.bluetooth.audio-impl \
 
 PRODUCT_PACKAGES += \
-    android.hardware.soundtrigger@2.3-impl:32
+    android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default:32 \
-    audio.usb.default:32 \
-    audio_policy.stub:32
+    audio.bluetooth.default \
+    audio.usb.default \
+    audio_policy.stub
 
 PRODUCT_PACKAGES += \
     MtkInCallService
@@ -84,6 +84,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+$(call soong_config_set_bool,android_hardware_audio,run_64bit,true)
 
 # Bluetooth
 PRODUCT_PACKAGES += \
