@@ -107,7 +107,7 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_unlock'),
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
         .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
-    'vendor/lib64/libmnl.so' : blob_fixup()
+    'vendor/lib64/libmnl-v30.so' : blob_fixup()
         .add_needed('libcutils.so'),
     ('vendor/lib64/libcodec2_mtk_vdec.so', 'vendor/lib64/libcodec2_mtk_venc.so'): blob_fixup()
         .replace_needed('libformatter.so', 'libformatter-v31.so'),
