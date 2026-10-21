@@ -161,10 +161,15 @@ ro.lmk.use_minfree_levels=false
 ro.lmk.use_new_strategy=true
 ro.lmk.thrashing_limit=100
 ro.lmk.thrashing_limit_decay=10
-ro.lmk.downgrade_pressure=60
-ro.lmk.swap_util_max=70
+ro.lmk.swap_util_max=95
 ro.lmk.swap_free_low_percentage=10
-ro.lmk.kill_heaviest_task=true
+ro.lmk.psi_partial_stall_ms=120
+ro.lmk.psi_complete_stall_ms=700
+ro.lmk.kill_timeout_ms=100
+ro.lmk.kill_heaviest_task=false
+
+# Background apps limit
+ro.sys.fw.bg_apps_limit=64
 
 # Media
 debug.mediatek.disp_decompress=1
