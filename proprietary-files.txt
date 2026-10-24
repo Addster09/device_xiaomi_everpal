@@ -1153,8 +1153,6 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
 
 # Media
-vendor/bin/vpud
-vendor/etc/init/vpud.rc
 vendor/lib/libion_mtk.so
 vendor/lib/libion_ulit.so
 vendor/lib/libvcodec_oal.so
