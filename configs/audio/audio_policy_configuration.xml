@@ -123,6 +123,12 @@
                 </mixPort>
                 <mixPort name="hifi_playback" role="source"/>
                 <mixPort name="hifi_input" role="sink"/>
+                <!--DOLBY SPATIALIZER-->
+                <mixPort name="spatial output" role="source" flags="AUDIO_OUTPUT_FLAG_SPATIALIZER">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
+                <!--DOLBY SPATIALIZER-->
             </mixPorts>
             <devicePorts>
                 <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
@@ -252,15 +258,15 @@
                 <route type="mix" sink="Earpiece"
                        sources="primary output,deep_buffer,mmap_no_irq_out,fast,voip_rx,Voice Call In"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,deep_buffer,mmap_no_irq_out,fast,voip_rx,FM Tuner In,Voice Call In"/>
+                       sources="primary output,deep_buffer,mmap_no_irq_out,fast,voip_rx,FM Tuner In,Voice Call In,spatial_output"/>
                 <route type="mix" sink="Wired Headset"
-                       sources="primary output,deep_buffer,mmap_no_irq_out,fast,voip_rx,FM Tuner In,Voice Call In"/>
+                       sources="primary output,deep_buffer,mmap_no_irq_out,fast,voip_rx,FM Tuner In,Voice Call In,spatial_output"/>
                 <route type="mix" sink="Wired Headphones"
-                       sources="primary output,deep_buffer,mmap_no_irq_out,fast,voip_rx,FM Tuner In,Voice Call In"/>
+                       sources="primary output,deep_buffer,mmap_no_irq_out,fast,voip_rx,FM Tuner In,Voice Call In,spatial_output"/>
                 <route type="mix" sink="USB Device Out"
-                       sources="primary output,deep_buffer,fast,voip_rx,FM Tuner In,Voice Call In,hifi_playback"/>
+                       sources="primary output,deep_buffer,fast,voip_rx,FM Tuner In,Voice Call In,hifi_playback,spatial_output"/>
                 <route type="mix" sink="USB Headset Out"
-                       sources="primary output,deep_buffer,fast,voip_rx,FM Tuner In,Voice Call In,hifi_playback"/>
+                       sources="primary output,deep_buffer,fast,voip_rx,FM Tuner In,Voice Call In,hifi_playback,spatial_output"/>
                 <route type="mix" sink="AUX Digital Out"
                        sources="primary output"/>
                 <route type="mix" sink="BT SCO"
@@ -291,6 +297,13 @@
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,AUX Digital In,USB Device In,USB Headset In"/>
                 <route type="mix" sink="fast input"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,AUX Digital In,USB Device In,USB Headset In"/>
+                <!-- Custom Bluetooth Routes Declaration for Dolby Processing -->
+                <route type="mix" sink="BT A2DP Out"
+                       sources="primary output,deep_buffer,voip_rx,spatial output"/>
+                <route type="mix" sink="BT A2DP Headphones"
+                       sources="primary output,deep_buffer,voip_rx,spatial output"/>
+                <route type="mix" sink="BT A2DP Speaker"
+                       sources="primary output,deep_buffer,voip_rx,spatial output"/>
             </routes>
 
         </module>
