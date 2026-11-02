@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_everpal.mk
+    $(LOCAL_DIR)/custom_everpal.mk
